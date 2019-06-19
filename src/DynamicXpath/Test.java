@@ -20,6 +20,12 @@ public class Test
 		driver.manage().window().maximize();
 		driver.manage().window().minimize();
 		Thread.sleep(2000);
+		System.setProperty("webdriver.chrome.driver","D://CodeTantra//Workspace//Selenium//CodeTantraSelenium//res//chromedriver.exe");
+		driver = new ChromeDriver();
+		driver.get("https://www.spicejet.com/");
+		driver.manage().window().maximize();
+		driver.manage().window().minimize();
+		Thread.sleep(2000);
 		
 		Actions action = new Actions(driver);
 		action.moveToElement(driver.findElement(By.xpath("//a[contains(text(), 'Login / Signup')]"))).build().perform();
