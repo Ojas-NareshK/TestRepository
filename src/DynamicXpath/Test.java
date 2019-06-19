@@ -18,6 +18,13 @@ public class Test
 		driver = new ChromeDriver();
 		driver.get("https://www.spicejet.com/");
 		driver.manage().window().maximize();
+		driver.manage().window().minimize();
+		Thread.sleep(2000);
+		System.setProperty("webdriver.chrome.driver","D://CodeTantra//Workspace//Selenium//CodeTantraSelenium//res//chromedriver.exe");
+		driver = new ChromeDriver();
+		driver.get("https://www.spicejet.com/");
+		driver.manage().window().maximize();
+		driver.manage().window().minimize();
 		Thread.sleep(2000);
 		
 		Actions action = new Actions(driver);
@@ -27,8 +34,14 @@ public class Test
 		Thread.sleep(3000);
 		action.moveToElement(driver.findElement(By.xpath("//a[contains(text(), 'Member Login')]"))).build().perform();
 		Thread.sleep(1000);
+		Thread.sleep(1000);
+		Actions action = new Actions(driver);
+		action.moveToElement(driver.findElement(By.xpath("//a[contains(text(), 'Login / Signup')]"))).build().perform();
+		Thread.sleep(1000);Actions action = new Actions(driver);
+		action.moveToElement(driver.findElement(By.xpath("//a[contains(text(), 'Login / Signup')]"))).build().perform();
+		Thread.sleep(1000);
 		
-		
+		driver.close();
 //		driver.findElement(By.xpath("//a[contains(text(),'SpiceClub Members')]")).click();
 //		driver.findElement(By.xpath("//a[contains(text(),'Member Login')]")).click();
 //		Thread.sleep(3000);
