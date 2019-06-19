@@ -32,7 +32,7 @@ public class Test
 //		driver.findElement(By.xpath("//a[contains(text(),'SpiceClub Members')]")).click();
 //		driver.findElement(By.xpath("//a[contains(text(),'Member Login')]")).click();
 //		Thread.sleep(3000);
-//		driver.quit();
+		driver.quit();
 		
 	}
 }
